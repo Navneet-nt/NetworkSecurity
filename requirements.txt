@@ -3,6 +3,7 @@ pandas
 numpy
 pymongo
 certifi
+pymongo[srv]==3.6
 scikit-learn
 mlflow
 pyaml
@@ -10,6 +11,4 @@ dagshub
 fastapi
 uvicorn
 python-multipart
-pymongo[srv]==3.6
-
 -e .
