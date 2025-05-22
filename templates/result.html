@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background: rgba(0,0,0,0.7);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            padding: 40px 30px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 24px;
+        }
+        .result-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 500px;
+        }
+        .result-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s, transform 0.6s;
+            background: #f9f9f9;
+            margin: 12px 0;
+            padding: 18px 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            font-size: 1.15em;
+        }
+        .result-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .ip-address {
+            font-weight: bold;
+            margin-right: 12px;
+            color: #2d3748;
+        }
+        .valid {
+            color: #2ecc40;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+        .not-safe {
+            color: #e74c3c;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Prediction Results</h2>
+        <div id="table-section">
+            <table id="prediction-table" style="width:100%;margin-top:32px;border-collapse:collapse;">
+                <thead>
+                    <tr style="background:#2a5298;">
+                        {% for key in table_data[0].keys() %}
+                            <th style="padding:12px 8px;border-radius:6px 6px 0 0;">{{ key|replace('_',' ')|title }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in table_data %}
+                        <tr class="table-row" style="opacity:0;transform:translateY(30px);transition:opacity 0.6s, transform 0.6s;">
+                            {% for value in row.values() %}
+                                <td style="padding:10px 8px;background:#fff;color:#222;border-bottom:1px solid #eee;">{{ value }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        // Animate the result item
+        window.addEventListener('DOMContentLoaded', function() {
+            const item = document.querySelector('.result-item');
+            if(item) {
+                setTimeout(() => {
+                    item.classList.add('visible');
+                }, 200);
+            }
+            // Animate table rows
+            const rows = document.querySelectorAll('.table-row');
+            rows.forEach((row, idx) => {
+                setTimeout(() => {
+                    row.style.opacity = 1;
+                    row.style.transform = 'translateY(0)';
+                }, 400 + idx * 120);
+            });
+        });
+    </script>
+</body>
+</html>

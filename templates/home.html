@@ -62,7 +62,14 @@
         <p>Analyze, train, and predict network security threats using advanced machine learning models.<br>Get started by exploring the available features below.</p>
         <a href="/docs" class="btn">API Documentation</a>
         <a href="/train" class="btn">Start Training</a>
-        <a href="/predict" class="btn">Predict</a>
+        <form action="/predict" method="post" enctype="multipart/form-data" style="display:inline;">
+            <input type="file" name="file" required style="margin:10px; color:#000; background:#fff; border-radius:6px; padding:6px;" />
+            <button type="submit" class="btn">Predict</button>
+        </form>
+        <form action="/predict_url" method="post" style="margin-top:20px;">
+            <input type="text" name="network_url" placeholder="Paste network URL here" required style="margin:10px; color:#000; background:#fff; border-radius:6px; padding:6px; width:60%;" />
+            <button type="submit" class="btn">Predict from URL</button>
+        </form>
         <div class="footer">
             &copy; {{ 2025 }} Network Security ML App. All rights reserved.
         </div>
