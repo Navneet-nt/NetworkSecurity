@@ -1,0 +1,6 @@
+[2025-05-22 20:02:17,729 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-05-22 20:02:17,738 ] 107 dagshub - INFO - Accessing as asapkiron
+[2025-05-22 20:02:18,256 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/asapkiron/NetworkSecurity "HTTP/1.1 200 OK"
+[2025-05-22 20:02:19,130 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-05-22 20:02:19,130 ] 107 dagshub - INFO - Initialized MLflow to track repo "asapkiron/NetworkSecurity"
+[2025-05-22 20:02:19,130 ] 107 dagshub - INFO - Repository asapkiron/NetworkSecurity initialized!

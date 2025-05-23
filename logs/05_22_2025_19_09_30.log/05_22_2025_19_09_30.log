@@ -1,0 +1,25 @@
+[2025-05-22 19:09:34,559 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-05-22 19:09:34,559 ] 107 dagshub - INFO - Accessing as asapkiron
+[2025-05-22 19:09:35,075 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/asapkiron/NetworkSecurity "HTTP/1.1 200 OK"
+[2025-05-22 19:09:35,565 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-05-22 19:09:35,571 ] 107 dagshub - INFO - Initialized MLflow to track repo "asapkiron/NetworkSecurity"
+[2025-05-22 19:09:35,572 ] 107 dagshub - INFO - Repository asapkiron/NetworkSecurity initialized!
+[2025-05-22 19:09:55,918 ] 42 root - INFO - Start data Ingestion
+[2025-05-22 19:09:59,703 ] 65 root - INFO - Performed train test split on the dataframe
+[2025-05-22 19:09:59,703 ] 67 root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[2025-05-22 19:09:59,703 ] 75 root - INFO - Exporting train and test file path.
+[2025-05-22 19:09:59,891 ] 84 root - INFO - Exported train and test file path.
+[2025-05-22 19:09:59,901 ] 45 root - INFO - Data Ingestion completed and artifact: DataIngestionArtifact(trained_file_path='Artifacts\\05_22_2025_19_09_30\\data_ingestion\\ingested\\train.csv', test_file_path='Artifacts\\05_22_2025_19_09_30\\data_ingestion\\ingested\\test.csv')
+[2025-05-22 19:09:59,920 ] 55 root - INFO - Initiate the data Validation
+[2025-05-22 19:10:00,062 ] 32 root - INFO - Required number of columns:2
+[2025-05-22 19:10:00,062 ] 33 root - INFO - Data frame has columns:31
+[2025-05-22 19:10:00,062 ] 32 root - INFO - Required number of columns:2
+[2025-05-22 19:10:00,064 ] 33 root - INFO - Data frame has columns:31
+[2025-05-22 19:10:00,532 ] 63 root - INFO - Entered initiate_data_transformation method of DataTransformation class
+[2025-05-22 19:10:00,532 ] 65 root - INFO - Starting data transformation
+[2025-05-22 19:10:00,582 ] 48 root - INFO - Entered get_data_trnasformer_object method of Trnasformation class
+[2025-05-22 19:10:00,582 ] 53 root - INFO - Initialise KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[2025-05-22 19:10:00,611 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[2025-05-22 19:10:00,613 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[2025-05-22 19:10:00,613 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[2025-05-22 19:10:00,618 ] 50 root - INFO - Exited the save_object method of MainUtils class
